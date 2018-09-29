@@ -49,8 +49,8 @@ class AWSSpotInstance:
         print(response)
         print('\n \n')
         time.sleep(10)
-        ec2 = boto3.resource('ec2', aws_access_key_id="AKIAIUEWH7FRMA2K2K6A",
-                             aws_secret_access_key="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", region_name='us-west-2')
+        ec2 = boto3.resource('ec2', aws_access_key_id="",
+                             aws_secret_access_key="", region_name='')
         instances = ec2.instances.filter(
             Filters=[{'Name': 'instance-state-name', 'Values': ['running']}])
         for instance in instances:
