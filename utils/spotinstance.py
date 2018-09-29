@@ -44,7 +44,7 @@ class AWSSpotInstance:
                 'Monitoring': {
                     'Enabled': False
                 },
-                'SecurityGroupIds': ['sg-0d9afadfd2b1a1030']
+                'SecurityGroupIds': ['']
             })
         print(response)
         print('\n \n')
