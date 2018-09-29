@@ -1,0 +1,16 @@
+export PYTHONPATH=$PYTHONPATH:/home/ubuntu/models/research:/home/ubuntu/models/research/slim
+python3 object_detection/model_main.py \
+    --pipeline_config_path=/home/ubuntu/FOOTBALL/experiments/training/ssd_mobilenet_v1_coco.config \
+    --model_dir=/home/ubuntu/FOOTBALL/experiments/training \
+    --num_train_steps=75000 \
+    --num_eval_steps=10 \
+    --alsologtostderr
+
+
+python3 object_detection/export_inference_graph.py \
+--input_type image_tensor \
+--pipeline_config_path=/home/ubuntu/FOOTBALL/experiments/training/ssd_mobilenet_v1_coco.config \
+--trained_checkpoint_prefix=/home/ubuntu/FOOTBALL/experiments/training/model.ckpt-75000 \
+--output_directory=/home/ubuntu/FOOTBALL/experiments/exported_model
+
+
