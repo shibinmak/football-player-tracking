@@ -49,8 +49,5 @@ class Recognize:
         max = pred.argmax(axis=1)
         score = (pred[0][max][0]) * 100
         label = self.index[str(max[0])]
-        now = datetime.datetime.now().strftime("%M%S")
-        f = os.path.join(config.DATASET_FOLDER, 'keras', '{}{}.png'.format(label, str(now)))
-        cv2.imwrite(f, datacollection)
 
         return label, score
