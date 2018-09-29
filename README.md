@@ -1,7 +1,7 @@
 # football-player-tracking
 Deep learning based player tracking for sports analysis .
 
-detailed description will be updated soon..
+detailed description and links to trained model will be updated soon.
 
 ![](result1.gif)
 ![](result2.gif)
