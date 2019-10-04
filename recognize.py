@@ -48,6 +48,6 @@ class Recognize:
         pred = self.model.predict(image)
         max = pred.argmax(axis=1)
         score = (pred[0][max][0]) * 100
-        label = self.index[str(max[0])]
+        labels = self.index[str(max[0])]
 
-        return label, score
+        return labels, score
